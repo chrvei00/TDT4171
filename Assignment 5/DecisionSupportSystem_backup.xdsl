@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Season">
+			<state id="Spring" />
+			<state id="Summer" />
+			<state id="Autumn" />
+			<state id="Winter" />
+			<probabilities>0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<decision id="Destination">
+			<state id="Asia" />
+			<state id="America" />
+			<state id="Africa" />
+		</decision>
+		<cpt id="Climate">
+			<state id="Varm" />
+			<state id="Cold" />
+			<parents>Season Destination</parents>
+			<probabilities>0.75 0.25 0.75 0.25 0.9 0.1 0.9 0.1 0.9 0.1 0.9 0.1 0.75 0.25 0.75 0.25 0.9 0.1 0.25 0.75 0.25 0.75 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Forex">
+			<state id="Good" />
+			<state id="Bad" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Cost">
+			<state id="Low" />
+			<state id="Moderate" />
+			<state id="High" />
+			<parents>Forex Destination</parents>
+			<probabilities>0.4 0.35 0.25 0.2 0.6 0.2 0.7 0.2 0.1 0.2 0.4 0.4 0.1 0.4 0.5 0.4 0.4 0.2</probabilities>
+		</cpt>
+		<cpt id="Healthcare">
+			<state id="Decent" />
+			<state id="Poor" />
+			<parents>Destination</parents>
+			<probabilities>0.8 0.2 0.8 0.2 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Transportation">
+			<state id="Decent" />
+			<state id="Poor" />
+			<parents>Destination</parents>
+			<probabilities>0.8 0.2 0.7 0.3 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Cuisine">
+			<state id="Diverse" />
+			<state id="Neutral" />
+			<state id="Bad" />
+			<parents>Destination</parents>
+			<probabilities>0.9 0.05 0.05 0.4 0.4 0.2 0.2 0.5 0.3</probabilities>
+		</cpt>
+		<utility id="Utility">
+			<parents>Climate Cost Healthcare Transportation Cuisine</parents>
+			<utilities>200 40 10 100 30 8 100 50 5 20 10 2 100 20 5 50 15 4 50 25 2.5 10 5 1 50 10 2.5 25 7.5 2 25 12.5 1.75 5 2.5 0.5 100 20 5 50 15 4 50 25 2.5 10 5 1 50 10 2.5 25 7.5 2 25 12.5 1 5 2.5 0.5 25 5 1 12 4 1 12 6 1 2.5 1 0</utilities>
+		</utility>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2423.0 ACADEMIC" name="Network1">
+			<node id="Utility">
+				<name>Utility</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>526 210 661 292</position>
+			</node>
+			<node id="Destination">
+				<name>Destination</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>32 36 129 90</position>
+			</node>
+			<node id="Cost">
+				<name>Cost</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>254 170 361 234</position>
+			</node>
+			<node id="Climate">
+				<name>Climate</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>249 96 356 154</position>
+			</node>
+			<node id="Season">
+				<name>Season</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>29 101 131 153</position>
+			</node>
+			<node id="Transportation">
+				<name>Transportation</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>250 333 362 392</position>
+			</node>
+			<node id="Cuisine">
+				<name>Cuisine</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>255 412 364 476</position>
+			</node>
+			<node id="Healthcare">
+				<name>Healthcare</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>252 246 364 304</position>
+			</node>
+			<node id="Forex">
+				<name>Forex</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>33 168 130 227</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
