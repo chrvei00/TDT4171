@@ -83,10 +83,10 @@ def main() -> None:
     fnn_test_accuracy = train_model(keras_data, model_type="feedforward")
     print('Model: Feedforward NN.\n'
           f'Test accuracy: {fnn_test_accuracy:.3f}')
-    # print("4. Training recurrent neural network...")
-    # rnn_test_accuracy = train_model(keras_data, model_type="recurrent")
-    # print('Model: Recurrent NN.\n'
-    #       f'Test accuracy: {rnn_test_accuracy:.3f}')
+    print("4. Training recurrent neural network...")
+    rnn_test_accuracy = train_model(keras_data, model_type="recurrent")
+    print('Model: Recurrent NN.\n'
+          f'Test accuracy: {rnn_test_accuracy:.3f}')
 
 
 
